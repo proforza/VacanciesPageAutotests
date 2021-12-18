@@ -36,7 +36,8 @@ namespace VacanciesPageAutotests
         public void SelectDepartment_Then_SelectLanguage_And_CountVacancies()
         {
             #region selecting department
-            webDriver.FindElement(By.XPath("//div[@class='form-group'][2]")).Click();
+            //webDriver.FindElement(By.XPath("//div[@class='form-group'][2]")).Click();
+            webDriver.FindElement(By.XPath("(//button[contains(@class, 'dropdown-toggle')])[1]")).Click();
             webDriver.FindElement(By.XPath($"//a[. = '{Department}']")).Click();
             var selectedDepartment = webDriver.FindElement(By.XPath("//button[contains(@class, 'selected')][1]")).Text; // maybe not the best way to locate this element
 
@@ -44,7 +45,8 @@ namespace VacanciesPageAutotests
             #endregion
 
             #region selecting languages
-            webDriver.FindElement(By.XPath("//div[@class='form-group'][3]")).Click();
+            //webDriver.FindElement(By.XPath("//div[@class='form-group'][3]")).Click();
+            webDriver.FindElement(By.XPath("(//button[contains(@class, 'dropdown-toggle')])[2]")).Click();
             // We can specify multiple languages divided by ','
             foreach (var lang in Language.Split(","))
             {
