@@ -15,8 +15,10 @@ Result .trx file will appear in the **/TestResults** folder. The most CI/CD tool
 
 ## Tests description
 
+You can specify input parameters in the VacanciesPageAutotests.runsettings config file. Note that you can specify multiple languages using ',' separator.
+
   1. Selecting a department and checking that it has been selected successfully
-  2. Selecting a language (or multiple languages, divided by ',') and asserting that corresponding checkboxes are checked
+  2. Selecting a language (or multiple languages) and asserting that corresponding checkboxes are checked
   3. Counting the amount of vacancies on the page and checking that they are equal to expected value
 
 ## License
