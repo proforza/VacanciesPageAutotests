@@ -8,7 +8,6 @@ namespace VacanciesPageAutotests
     [TestFixture]
     public class VacanciesCountTests
     {
-        private TestContext TestContext { get; set; }
         private IWebDriver webDriver;
         private string Department { get; set; }
         private string Language { get; set; }
@@ -35,6 +34,9 @@ namespace VacanciesPageAutotests
         [Test]
         public void SelectDepartment_Then_SelectLanguage_And_CountVacancies()
         {
+            // Close cookie popup
+            webDriver.FindElement(By.Id("cookiescript_close")).Click();
+
             #region selecting department
             //webDriver.FindElement(By.XPath("//div[@class='form-group'][2]")).Click();
             webDriver.FindElement(By.XPath("(//button[contains(@class, 'dropdown-toggle')])[1]")).Click();
