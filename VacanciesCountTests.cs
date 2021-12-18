@@ -18,8 +18,8 @@ namespace VacanciesPageAutotests
         public void VacanciesCountTestsSetup()
         {
             webDriver = new ChromeDriver();
-            webDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(3);
-            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            webDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             webDriver.Navigate().GoToUrl(TestContext.Parameters["BaseUrl"]);
             webDriver.Manage().Window.Maximize();
 
