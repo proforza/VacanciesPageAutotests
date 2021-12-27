@@ -33,7 +33,7 @@ namespace VacanciesPageAutotests
             #region selecting department
             vacanciesPage.SelectDepartment(Department);
 
-            Assert.That(vacanciesPage.IsDepartmentSelected(Department));
+            Assert.That(vacanciesPage.IsDepartmentSelected(Department)); // IsDepartmentSelectedWithExplicitWait method can be used here as well
             #endregion
 
             #region selecting languages

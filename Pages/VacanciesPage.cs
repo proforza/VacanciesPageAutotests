@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace VacanciesPageAutotests.Pages
 {
@@ -48,6 +50,13 @@ namespace VacanciesPageAutotests.Pages
         private IWebElement GetDepartmentDropDownOption(string department) => webDriver.FindElement(By.XPath($"//a[. = '{department}']"));
         private IWebElement GetLanguageDropDownOption(string lang) => webDriver.FindElement(By.XPath($"//label[. = '{lang}']/preceding-sibling::input")); // assume that there are no any other labels with such names
         public bool IsDepartmentSelected(string department) => GetDepartmentDropDown(department).Text == department;
+        // never used
+        // alternative version of this method using explicit wait. But as I said before - I think that explicit waits are like overkill here
+        public bool IsDepartmentSelectedWithExplicitWait(string department) 
+        {
+            WebDriverWait wait = new(webDriver, TimeSpan.FromSeconds(10));
+            return wait.Until(driver => driver.FindElement(By.XPath($"//button[contains(@class,'dropdown-toggle')][. = '{department}']")).Displayed);
+        }
         public bool IsLanguageSelected(string lang) => GetLanguageDropDownOption(lang).Selected;
 
     }
