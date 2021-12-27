@@ -16,7 +16,6 @@ namespace VacanciesPageAutotests
             webDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
             webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             webDriver.Manage().Window.Maximize();
-            Console.WriteLine(webDriver.Manage().Window.Size);
         }
 
         [TearDown]
