@@ -28,6 +28,8 @@ namespace VacanciesPageAutotests
         {
             VacanciesPage vacanciesPage = new(webDriver);
 
+            vacanciesPage.CloseCookiePopup();
+
             #region selecting department
             vacanciesPage.SelectDepartment(Department);
 
