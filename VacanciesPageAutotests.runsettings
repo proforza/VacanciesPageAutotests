@@ -2,9 +2,9 @@
 <RunSettings>
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="BaseUrl" value="https://careers.veeam.ru/vacancies" />
-    <Parameter name="Department" value="Разработка продуктов" />
-    <Parameter name="Language" value="Английский,Русский" />
-    <Parameter name="ExpectedVacanciesCount" value="9" />
+	  <Parameter name="VacanciesPageTests.Url" value="https://careers.veeam.ru/vacancies" />
+	  <Parameter name="VacanciesPageTests.Department" value="Разработка продуктов" />
+	  <Parameter name="VacanciesPageTests.Language" value="Английский,Русский" />
+	  <Parameter name="VacanciesPageTests.ExpectedVacanciesCount" value="7" />
   </TestRunParameters>
 </RunSettings>
